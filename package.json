@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "studylab-board",
+  "name": "studylab-boardv1",
   "packageManager": "yarn@1.22.22",
   "workspaces": [
     "excalidraw-app",
