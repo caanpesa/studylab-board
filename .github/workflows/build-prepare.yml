@@ -24,7 +24,8 @@ jobs:
 
       - name: Create package.json for distribution
         run: |
-          node -e "const pkg = require('./package.json'); delete pkg.devDependencies; delete pkg.scripts; require('fs').writeFileSync('build/package.json', JSON.stringify(pkg, null, 2));"
+          mkdir -p build
+          node -e "const pkg = require('./package.json'); delete pkg.devDependencies; delete pkg.scripts; require('fs').writeFileSync('./build/package.json', JSON.stringify(pkg, null, 2));"
 
       - name: Commit and push if changed
         run: |
